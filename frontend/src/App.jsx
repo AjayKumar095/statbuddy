@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
 
-        fetch('http://localhost:8000/api/test/')
+        fetch('http://172.17.5.210:8000/api/test/')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok')
@@ -26,7 +26,7 @@ function App() {
         setError(err.message)
         setLoading(false)
       })
-  }), [];
+  }, []); 
 ;
   if (loading) {
     return <div>Loading...</div>;
