@@ -6,6 +6,11 @@ from django.http import JsonResponse
 
 def test(request):
     return JsonResponse({"message": "Hello from Django!",
-                         "data": "Sample data from backend"})
+                         "data": "Sample data from home page"})
 
-
+def about(request):
+    return JsonResponse({"message": "Hello from Django!",
+                         "data": "Sample data from about page"})
+def contact(request):
+    return JsonResponse({"message": "Hello from Django!",
+                         "data": "Sample data from contact page"})

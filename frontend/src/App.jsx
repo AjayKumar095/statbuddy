@@ -1,53 +1,21 @@
-import {  useEffect, useState } from 'react'
 import './App.css'
-
-
+import Header from './components/header.jsx'
+import { Route, Routes} from "react-router-dom"
+import Home from './components/home.jsx' 
+import About from './components/about.jsx'
+import Contact from './components/contact.jsx'
 
 function App() {
-
-  const [Message, setMessage] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-
-        fetch('http://172.17.5.210:8000/api/test/')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok')
-        }
-        return response.json()
-      })
-      .then(data => {
-        setMessage(data)   // save API response
-        setLoading(false)
-      })
-      .catch(err => {
-        console.error("Fetch error:", err)
-        setError(err.message)
-        setLoading(false)
-      })
-  }, []); 
-;
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
-
-  return (
-
-    <div className='container bg-body-secondary d-flex flex-column justify-content-center'>
-      <h1 className='text-center'>{Message.message}</h1>
-      <br/>
-      <p className='text-center'>{Message.data}</p>
-
       
+  return (
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
-    
-   
   )
 }
 
