@@ -2,6 +2,7 @@ import {  useEffect, useState } from 'react'
 import './App.css'
 
 
+
 function App() {
 
   const [Message, setMessage] = useState(null);
@@ -42,6 +43,8 @@ function App() {
       <h1 className='text-center'>{Message.message}</h1>
       <br/>
       <p className='text-center'>{Message.data}</p>
+
+      
     </div>
    
   )
