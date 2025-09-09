@@ -11,10 +11,111 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
   <title>Stat-Buddy</title>
+  <style>
+    body {
+      background-color: rgb(242, 248, 252);
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    .custom-button-gradient {
+      background-image: linear-gradient(to right, #4441ff, #9522f9);
+    }
+
+    .custom-button {
+      transition: transform 0.3s ease, 0.3s ease;
+
+    }
+
+    .custom-button:hover {
+      transform: translateY(-5px);
+    }
+  </style>
 </head>
 
 <body>
-  
+
+  <nav class="navbar navbar-expand-lg bg-light sticky-top shadow z-0">
+    <div class="container">
+      <a href="" class="navbar-brand">
+        <img src="./src/assets/logo.png" alt="Logo" width="30" height="30"
+          class="d-inline-block mt-0 ms-2 me-2 align-text-top">
+        <h4 class=" d-inline-block" style="color: rgba(94, 94, 255, 0.963);"><b>Stat-Buddy</b></h4>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
+        <ul class="navbar-nav me-3 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item ">
+            <a href="" class="btn btn-primary">🚀 Launch App</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-12 col-lg-6 mb-4">
+        <span class="border border-info border-1 bg-info-subtle rounded-pill p-2 mb-4">🚀 Interactive Learning
+          Platform</span>
+
+        <h1 class="mt-4"><strong>Master <span style="color: rgba(94, 94, 255, 0.963);">Statistics</span> <br>
+            Through Interactive Learning</strong></h1>
+
+        <p class="mt-4" style=" font-size: large;">Transform complex statistical concepts into engaging,
+          hands-on experiences. Learn through theory, practice with real data,
+          and visualize results in real-time.</p>
+
+        <span class="btn btn-lg custom-button-gradient custom-button me-3 mb-2 shadow text-white"><b>Start Learning
+            Now</b></span>
+        <span class="btn btn-lg custom-button border-1 border-dark-subtle shadow me-3 mb-2 fw-medium"><b>📺 Watch
+            Demo</b></span>
+
+        <div class="container border-top mt-5 p-2">
+          <div class="row">
+            <div class="col-12 col-sm-4 mb-2 p-2 d-flex flex-column justify-content-center align-items-center"
+              style="align-items: center;">
+              <h4 style="color: rgb(63, 63, 249);">25+</h4>
+              <p>Interactive Topics</p>
+            </div>
+            <div class="col-12 col-sm-4 mb-2 p-2 d-flex flex-column justify-content-center align-items-center">
+              <h4 style="color: green;">100%</h4>
+              <p>Hands-on Learning</p>
+            </div>
+            <div class="col-12 col-sm-4 mb-2 p-2 d-flex flex-column justify-content-center align-items-center">
+              <h4>♾️</h4>
+              <p>Practice Problems</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-12 col-lg-6 p-5">
+          <div class="container rounded-2 border-1 border">
+            hello
+          </div>
+      </div>
+    </div>
+  </div>
+
+
   <div id="root" class="containter-fluid"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
