@@ -33,6 +33,60 @@
     .custom-button:hover {
       transform: translateY(-5px);
     }
+
+    .bar-box-animation {
+      animation: barbox infinite 6s ease-in-out;
+    }
+
+    @keyframes barbox {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .bar {
+      flex: 1;
+      /* equal width for all bars */
+      margin: 0 2px;
+      /* 10 bars + gaps = ~100% */
+      height: 0;
+      /* start collapsed */
+      transition: height 1s ease;
+      bottom: 0;
+    }
+
+    .bar-color-danger {
+      background: linear-gradient(to top, #210038, #d60024);
+    }
+
+    .bar-color-success {
+      background: linear-gradient(to top, #0f3600, #39fb03);
+    }
+
+    .bar-color-normal {
+      background: linear-gradient(to top, #000061, #03c8ff);
+    }
+
+    .rotat-animation {
+      animation: rotation infinite 4s linear;
+    }
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+
+    }
   </style>
 </head>
 
@@ -69,7 +123,7 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container" style="min-height: 90vh;">
     <div class="row" style="margin-top: 100px;">
       <div class="col-12 col-lg-6 mb-4">
         <span class="border border-info border-1 bg-info-subtle rounded-pill p-2 mb-4">🚀 Interactive Learning
@@ -82,7 +136,7 @@
           hands-on experiences. Learn through theory, practice with real data,
           and visualize results in real-time.</p>
 
-        <span class="btn btn-lg custom-button-gradient custom-button me-3 mb-2 shadow text-white"><b>Start Learning
+        <span class="btn btn-lg custom-button-gradient custom-button me-3 mb-2 shadow text-white"><b>🎯Start Learning
             Now</b></span>
         <span class="btn btn-lg custom-button border-1 border-dark-subtle shadow me-3 mb-2 fw-medium"><b>📺 Watch
             Demo</b></span>
@@ -104,20 +158,102 @@
             </div>
           </div>
         </div>
-
       </div>
 
-      <div class="col-12 col-lg-6 p-5">
-          <div class="container rounded-2 border-1 border">
-            hello
+      <div class="col-12 col-lg-6 p-2 d-flex flex-column ">
+
+        <img class="rotat-animation float-end " src="./src/assets/setting.png" alt="" width="70" height="70">
+
+        <!-- Grap animation -->
+        <div class="bar-box-animation bg-white container p-3 rounded-3 shadow">
+          <h6 class="mb-2">📊 Statistics Playground <span class="float-end">🟢🟡🔴</span></h6>
+          <div class="p-2 d-flex justify-content-between align-items-end rounded-2 border border-info bg-info-subtle"
+            style="height: 250px;">
+            <div class="bar bg-danger" data-height="10%"></div>
+            <div class="bar bg-danger" data-height="15%"></div>
+            <div class="bar bg-warning" data-height="30%"></div>
+            <div class="bar bg-warning" data-height="35%"></div>
+            <div class="bar bg-primary" data-height="50%"></div>
+            <div class="bar bg-primary" data-height="70%"></div>
+            <div class="bar bg-primary" data-height="80%"></div>
+            <div class="bar bg-primary" data-height="90%"></div>
           </div>
+
+          <hr class="mt-2 mb-2">
+          <div class=" row m-auto d-flex justify-content-around">
+            <div class="col-lg-5 col-sm-12 m-1 p-1 d-flex flex-column border border-1 rounded-2"
+              style="background-color: rgba(183, 208, 243, 0.356);">
+              <p>Mean <span style="color: rgb(30, 30, 249);">87.9</span></p>
+
+            </div>
+            <div class="col-lg-5 col-sm-12 m-1 p-1 d-flex flex-column border border-1 rounded-2"
+              style="background-color: rgba(183, 208, 243, 0.356);">
+              <p>Std Dev <span style="color: rgb(30, 249, 30);">12.4</span></p>
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
+  <div class="contianter-fluid" style="background-color: white;">
+    <div class=" container p-5">
+      <h1>
+        <center>Why Choose Stat-Buddy?</center>
+      </h1>
+      <h5 class=" fw-light">
+        <center>Experience the perfect blend of theory and practice with our innovative learning approach</center>
+      </h5>
+
+      <div class="row d-flex justify-content-around mt-5">
+        <div class="col-lg-4 col-md-6 col-sm-12 d-flex flex-column p-2 ">
+          <img class="mb-3" src="./src/assets/stackofbooks.png" alt="" width="50" height="50">
+          <h6>Interactive Theory</h6>
+          <p>Learn statistical concepts through clear explanations,
+            real-world examples, and visual aids that make complex topics accessible.</p>
+          <ul type="none">
+            <li>✔️ Step-by-step explanations</li>
+            <li>✔️ Real-world examples</li>
+            <li>✔️ Mathematical formulas</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 d-flex flex-column p-2 ">
+          <img class="mb-3" src="./src/assets/gamepad.png" alt="" width="50" height="50">
+          <h6>Interactive Theory</h6>
+          <p>Experiment with parameters, input your own data, and see instant results.
+            Learning by doing has never been more engaging.</p>
+          <ul type="none">
+            <li>✔️ Real-time calculations</li>
+            <li>✔️ Custom data input</li>
+            <li>✔️ Interactive simulations</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 d-flex flex-column p-2 ">
+          <img class="mb-3" src="./src/assets/graphpie.png" alt="" width="50" height="50">
+          <h6>Interactive Theory</h6>
+          <p>Watch charts and graphs update in real-time as you adjust parameters.
+            Visualize statistical concepts like never before.</p>
+          <ul type="none">
+            <li>✔️ Real-time charts</li>
+            <li>✔️ Interactive graphs</li>
+            <li>✔️ Visual feedback</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div id="root" class="containter-fluid"></div>
   <script type="module" src="/src/main.jsx"></script>
+
+  <script>
+    window.onload = function () {
+      document.querySelectorAll('.bar').forEach(bar => {
+        bar.style.height = bar.dataset.height;
+      });
+    }
+  </script>
 </body>
 
 </html>
