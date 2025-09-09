@@ -31,9 +31,10 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-     "corsheaders", # for handling CORS
-     "authenticator",
-      "root_app", # our new app
+    "corsheaders", # for handling CORS
+    "authenticator",
+    "root_app",
+    "stat_methods",  # our new app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
